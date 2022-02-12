@@ -46,11 +46,8 @@ return packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'              -- Useful lua functions used ny lots of plugins
   use 'ciaranm/securemodelines'
   use 'justinmk/vim-sneak'
-  use 'preservim/nerdcommenter'
   use 'nvim-lualine/lualine.nvim'          -- Lua status line
-  use 'kyazdani42/nvim-web-devicons'
   use 'machakann/vim-highlightedyank'
-  use 'andymass/vim-matchup'
   use "numToStr/Comment.nvim"              -- Easily comment stuff
 
   -- Colorschemes
