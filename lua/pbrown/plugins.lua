@@ -78,9 +78,11 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lua'
   use 'neovim/nvim-lspconfig'               -- enable LSP
   use 'williamboman/nvim-lsp-installer'     -- manage installation of language servers
+  use 'simrat39/rust-tools.nvim'            -- rust-analyzer enhancements
 
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-ui-select.nvim' -- required by rust-tools
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

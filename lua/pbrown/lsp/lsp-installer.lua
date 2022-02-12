@@ -11,6 +11,16 @@ lsp_installer.on_server_ready(function(server)
     capabilities = require("pbrown.lsp.handlers").capabilities,
   }
 
+  -- Initialise the LSP with rust-tools instead
+  if server.name == "rust_analyzer" then
+    require("rust-tools").setup {
+      server = vim.tbl_deep_extend("force", server:get_default_options(), opts),
+    }
+    server:attach_buffers()
+    return
+  end
+
+
   if server.name == "sumneko_lua" then
     local sumneko_opts = require("pbrown.lsp.settings.sumneko_lua")
     opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
