@@ -13,7 +13,7 @@ telescope.setup {
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
-    color_devicons = true,
+    color_devicons = false,
 
     mappings = {
       i = {
