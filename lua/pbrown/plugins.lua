@@ -49,6 +49,8 @@ return packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim'          -- Lua status line
   use 'machakann/vim-highlightedyank'
   use "numToStr/Comment.nvim"              -- Easily comment stuff
+  use 'kyazdani42/nvim-web-devicons'       -- Provides icons for plugins when using a Nerdfont
+  use 'kyazdani42/nvim-tree.lua'           -- File explorer in Lua
 
   -- Colorschemes
   use 'jonathanfilip/vim-lucius'

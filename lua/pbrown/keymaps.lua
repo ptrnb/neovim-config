@@ -85,6 +85,10 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Quick save --
 keymap("n", "<leader>w", ":w<CR>", opts)
 
+-- NvimTree --
+keymap("n", "<leader>nt", "<CMD>NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>nr", "<CMD>NvimTreeRefresh<CR>", opts)
+
 -- Use sudo to write --
 -- keymap("c", "w!!", "w !sudo tee % > /dev/null")
 
