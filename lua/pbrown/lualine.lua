@@ -5,30 +5,28 @@ end
 
 lualine.setup {
   options = {
-    icons_enabled = false,
-    theme = 'nord',
+    icons_enabled = true,
+    theme = 'everforest',
     component_separators = { left = '', right = ''},
---    section_separators = { left = '', right = ''},
---    section_separators = { left = '█', right = '█'},
-    section_separators = { left = '|', right = '|' },
+    -- section_separators = { left = '', right = ''},
+    -- section_separators = { left = '', right = ''},
+    -- section_separators = { left = '|', right = '|' },
+    section_separators = { left = ' ', right = ' ' },
     disabled_filetypes = {},
     always_divide_middle = true,
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {
+    lualine_b = {'branch',  'diff', 'diagnostics'},
+    lualine_c = {
       {
-          'branch',
-          icons_enabled = true,
-          icon = '',
-      },
-      {
-        'diff', 'diagnostics'
-      },
+        'filename',
+        padding = 5,
+      }
     },
-    lualine_c = {'filename'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
+    -- lualine_y = {'progress'},
+    lualine_y = {},
     lualine_z = {'location'}
   },
   inactive_sections = {
