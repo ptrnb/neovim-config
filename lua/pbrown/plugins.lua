@@ -43,14 +43,17 @@ return packer.startup(function(use)
   -- My plugins here
   use 'wbthomason/packer.nvim'             -- Have packer manage itself
   use 'nvim-lua/popup.nvim'                -- An implementation of the Popup API from vim in Neovim
-  use 'nvim-lua/plenary.nvim'              -- Useful lua functions used ny lots of plugins
-  use 'ciaranm/securemodelines'
-  use 'justinmk/vim-sneak'
+  use 'nvim-lua/plenary.nvim'              -- Useful lua functions used by lots of plugins
+  use 'justinmk/vim-sneak'                 -- A better, faster forward search
   use 'nvim-lualine/lualine.nvim'          -- Lua status line
-  use 'machakann/vim-highlightedyank'
   use "numToStr/Comment.nvim"              -- Easily comment stuff
   use 'kyazdani42/nvim-web-devicons'       -- Provides icons for plugins when using a Nerdfont
-  use 'kyazdani42/nvim-tree.lua'           -- File explorer in Lua
+  use {'kyazdani42/nvim-tree.lua',         -- File explorer in Lua
+    requires = 'kyazdani42/nvim-web-devicons'
+  }
+  use {'akinsho/bufferline.nvim',          -- Buffer statusline
+    requires = 'kyazdani42/nvim-web-devicons'
+  }
 
   -- GIT --
   use 'lewis6991/gitsigns.nvim'            -- Git integration for Neovim
