@@ -52,6 +52,9 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons'       -- Provides icons for plugins when using a Nerdfont
   use 'kyazdani42/nvim-tree.lua'           -- File explorer in Lua
 
+  -- GIT --
+  use 'lewis6991/gitsigns.nvim'            -- Git integration for Neovim
+
   -- Colorschemes
   use 'jonathanfilip/vim-lucius'
   use 'EdenEast/nightfox.nvim'
