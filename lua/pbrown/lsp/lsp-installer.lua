@@ -13,9 +13,8 @@ lsp_installer.on_server_ready(function(server)
 
   -- Initialise the LSP with rust-tools instead
   if server.name == "rust_analyzer" then
-    local rust_opts = {}
     require("rust-tools").setup {
-      server = vim.tbl_deep_extend("force", server:get_default_options(), rust_opts),
+      server = vim.tbl_deep_extend("force", server:get_default_options(), opts),
     }
     server:attach_buffers()
     return
