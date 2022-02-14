@@ -55,6 +55,9 @@ return packer.startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons'
   }
 
+  -- Markdown --
+  use 'ellisonleao/glow.nvim'              -- Console based markdown previewer using Glow
+
   -- GIT --
   use 'lewis6991/gitsigns.nvim'            -- Git integration for Neovim
 

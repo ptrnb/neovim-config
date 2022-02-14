@@ -89,6 +89,9 @@ keymap("n", "<leader>w", ":w<CR>", opts)
 keymap("n", "<leader>nt", "<CMD>NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>nr", "<CMD>NvimTreeRefresh<CR>", opts)
 
+-- Rust inlay hints --
+keymap("n", "<leader>rh", "<CMD>RustToggleInlayHints<CR>", opts)
+
 -- Use sudo to write --
 -- keymap("c", "w!!", "w !sudo tee % > /dev/null")
 
