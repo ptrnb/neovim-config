@@ -4,19 +4,20 @@ local options = {
   icon = false,
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages
-  completeopt = { "menuone", "noselect" }, -- mostly just for cmp
+  completeopt = {                          -- Options for nvim-cmp
+    "menuone",                             -- popup even when there's only one match
+    "noinsert",                            -- do not insert text until a selection is made
+    "noselect",                            -- force user to select from the popup menu
+  },
   conceallevel = 0,                        -- so that `` is visible in markdown files
   fileencoding = "utf-8",                  -- the encoding written to a file
-  hlsearch = true,                         -- highlight all matches on previous search pattern
   ignorecase = true,                       -- ignore case in search patterns
-  incsearch = true,
   gdefault = true,                         -- default to substituting all matches on a line
   mouse = "a",                             -- allow the mouse to be used in neovim
   pumheight = 10,                          -- pop up menu height
   showmode = false,                        -- we don't need to see things like -- INSERT -- anymore
   showtabline = 1,                         -- only show tabs when there are at least two pages
   smartcase = true,                        -- smart case
-  autoindent = true,                       -- Automatic indenting
   smartindent = true,                      -- make indenting smarter again
   splitbelow = true,                       -- force all horizontal splits to go below current window
   splitright = true,                       -- force all vertical splits to go to the right of current window
@@ -52,3 +53,11 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-,_]]
 vim.cmd [[set formatoptions+=t,c,r,q,n,b]]  -- describes automatic formatting - see fo-table
 vim.cmd [[set listchars=nbsp:¬,eol:¶,extends:»,precedes:«,trail:•]]
+
+-- Disable matchit --
+vim.g.loaded_matchit = 1
+
+-- Rust configuration --
+vim.g.rust_recommended_style = 1
+vim.g.rust_fold = 1
+vim.g.rustfmt_autosave = 1
