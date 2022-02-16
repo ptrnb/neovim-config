@@ -26,10 +26,10 @@ keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
 
 -- Better window navigation
-keymap("n", "<C-S-h>", "<C-w>h", opts)
-keymap("n", "<C-S-j>", "<C-w>j", opts)
-keymap("n", "<C-S-k>", "<C-w>k", opts)
-keymap("n", "<C-S-l>", "<C-w>l", opts)
+keymap("n", "<C-S-H>", "<C-W>h", opts)
+keymap("n", "<C-S-J>", "<C-W>j", opts)
+keymap("n", "<C-S-K>", "<C-W>k", opts)
+keymap("n", "<C-S-L>", "<C-W>l", opts)
 
 keymap("n", "<leader>nt", ":Lex 30<cr>", opts)
 
