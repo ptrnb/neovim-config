@@ -46,7 +46,7 @@ return packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'              -- Useful lua functions used by lots of plugins
   use 'justinmk/vim-sneak'                 -- A better, faster forward search
   use 'nvim-lualine/lualine.nvim'          -- Lua status line
-  use "numToStr/Comment.nvim"              -- Easily comment stuff
+  use 'numToStr/Comment.nvim'              -- Easily comment stuff
   use 'kyazdani42/nvim-web-devicons'       -- Provides icons for plugins when using a Nerdfont
   use {'kyazdani42/nvim-tree.lua',         -- File explorer in Lua
     requires = 'kyazdani42/nvim-web-devicons'
@@ -54,6 +54,8 @@ return packer.startup(function(use)
   use {'akinsho/bufferline.nvim',          -- Buffer statusline
     requires = 'kyazdani42/nvim-web-devicons'
   }
+  use 'windwp/nvim-autopairs'            -- Matching brackets
+
 
   -- Markdown --
   use 'ellisonleao/glow.nvim'              -- Console based markdown previewer using Glow
@@ -77,7 +79,9 @@ return packer.startup(function(use)
   use 'hrsh7th/nvim-cmp'                    -- The completion plugin
   use 'hrsh7th/cmp-buffer'                  -- buffer completions
   use 'hrsh7th/cmp-path'                    -- path completions
-  use 'hrsh7th/cmp-cmdline'                 -- cmdline completions
+  -- use 'hrsh7th/cmp-cmdline'                 -- cmdline completions
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-nvim-lua'
   use 'saadparwaiz1/cmp_luasnip'            -- snippet completions
 
   -- Snippets
@@ -85,8 +89,6 @@ return packer.startup(function(use)
   use 'rafamadriz/friendly-snippets'        -- a bunch of snippets to use
 
   -- LSP
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-nvim-lua'
   use 'neovim/nvim-lspconfig'               -- enable LSP
   use 'williamboman/nvim-lsp-installer'     -- manage installation of language servers
   use 'simrat39/rust-tools.nvim'            -- rust-analyzer enhancements

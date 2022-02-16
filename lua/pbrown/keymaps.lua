@@ -26,10 +26,10 @@ keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
 
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-S-H>", "<C-W>h", opts)
+keymap("n", "<C-S-J>", "<C-W>j", opts)
+keymap("n", "<C-S-K>", "<C-W>k", opts)
+keymap("n", "<C-S-L>", "<C-W>l", opts)
 
 keymap("n", "<leader>nt", ":Lex 30<cr>", opts)
 
@@ -44,7 +44,7 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Clean trailing whitespace --
--- keymap("n", "<leader>w", "mz:%s/\s\+$//<cr>:let @/=''<cr>`z", opts)  -- invalid char
+keymap("n", "<leader>w", "mz: %s/\\s\\+$//<CR> :let @/=''<CR> `z", opts)
 
 -- Select entire buffer
 keymap("n", "vaa", "ggvGg_", opts)
@@ -81,9 +81,6 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
--- Quick save --
-keymap("n", "<leader>w", ":w<CR>", opts)
 
 -- NvimTree --
 keymap("n", "<leader>nt", "<CMD>NvimTreeToggle<CR>", opts)
