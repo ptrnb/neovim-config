@@ -90,6 +90,12 @@ telescope.setup {
     -- builtin picker
   },
   extensions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = "smart_case",
+    }
     -- media_files = {                 -- only supported on linux
         -- filetypes whitelist
         -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
@@ -103,3 +109,6 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
+
+telescope.load_extension('fzf')
+telescope.load_extension('zoxide')
