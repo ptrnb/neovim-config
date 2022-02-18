@@ -92,7 +92,14 @@ return packer.startup(function(use)
   use 'neovim/nvim-lspconfig'               -- enable LSP
   use 'williamboman/nvim-lsp-installer'     -- manage installation of language servers
   use 'simrat39/rust-tools.nvim'            -- rust-analyzer enhancements
+  use 'jose-elias-alvarez/null-ls.nvim'     -- formatter and linter that links into LSP
 
+  -- Rust
+  -- use {
+  --   'rust-lang/rust.vim',                  -- Rust syntax support
+  --   enabled = false,
+  -- }
+  --
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-ui-select.nvim' -- required by rust-tools

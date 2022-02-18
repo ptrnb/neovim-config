@@ -21,7 +21,9 @@ lualine.setup {
     lualine_c = {
       {
         'filename',
+        path = 1,
         padding = 5,
+        shorting_target = 40,
       }
     },
     lualine_x = {'encoding', 'fileformat', 'filetype'},
