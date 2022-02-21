@@ -40,7 +40,7 @@ local options = {
   wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
-  guifont = "Monoid Nerd Font:h14",               -- the font used in graphical neovim applications
+  guifont = "Monoid Nerd Font:h14",        -- the font used in graphical neovim applications
 }
 
 vim.opt.shortmess:append "c"
@@ -57,7 +57,8 @@ vim.cmd [[set listchars=nbsp:¬,eol:¶,extends:»,precedes:«,trail:•]]
 -- Disable matchit --
 vim.g.loaded_matchit = 1
 
--- Rust configuration --
+-- Rust configuration for rust.vim plugin --
 vim.g.rust_recommended_style = 1
 vim.g.rust_fold = 1
+
 vim.g.rustfmt_autosave = 1

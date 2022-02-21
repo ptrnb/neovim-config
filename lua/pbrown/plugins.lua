@@ -54,7 +54,6 @@ return packer.startup(function(use)
   use {'akinsho/bufferline.nvim',          -- Buffer statusline
     requires = 'kyazdani42/nvim-web-devicons'
   }
-  use 'windwp/nvim-autopairs'            -- Matching brackets
 
 
   -- Markdown --
@@ -74,6 +73,7 @@ return packer.startup(function(use)
   }
   use 'p00f/nvim-ts-rainbow'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use 'anuvyklack/pretty-fold.nvim'
 
   -- Completion
   use 'hrsh7th/nvim-cmp'                    -- The completion plugin

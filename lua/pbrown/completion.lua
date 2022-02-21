@@ -45,6 +45,9 @@ local kind_icons = {
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
 cmp.setup {
+  completion = {
+    autocomplete = true
+  },
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -130,7 +133,7 @@ cmp.setup {
     end,
   },
   sources = {
-    { name = "nvim_lua" },
+    { name = "nvim_lua", keyword_length = 3 },
     { name = "nvim_lsp", keyword_length = 3 },
     { name = "luasnip", keyword_length = 2 },
     { name = "buffer", keyword_length = 5 },
@@ -155,7 +158,14 @@ cmp.setup {
     border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
   },
   experimental = {
-    ghost_text = true,
+    ghost_text = false,
     native_menu = false,
   },
 }
+
+cmp.setup.filetype({ 'markdown', 'help' }, {
+  sources = {
+    { name = 'buffer' },
+    { name = 'path' },
+  }
+})
