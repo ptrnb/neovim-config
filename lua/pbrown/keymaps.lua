@@ -26,10 +26,10 @@ keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
 
 -- Better window navigation
-keymap("n", "<C-S-H>", "<C-W>h", opts)
-keymap("n", "<C-S-J>", "<C-W>j", opts)
-keymap("n", "<C-S-K>", "<C-W>k", opts)
-keymap("n", "<C-S-L>", "<C-W>l", opts)
+keymap("n", "<C-H>", "<C-W>h", term_opts)
+keymap("n", "<C-J>", "<C-W>j", term_opts)
+keymap("n", "<C-K>", "<C-W>k", term_opts)
+keymap("n", "<C-L>", "<C-W>l", term_opts)
 
 keymap("n", "<leader>nt", ":Lex 30<cr>", opts)
 
@@ -54,9 +54,8 @@ keymap("n", "Vaa", "ggVG", opts)
 keymap("n", "<leader><leader>i", ":set list!<cr>", opts)
 
 -- Insert --
--- Press jk fast to enter
+-- Press jk fast to <ESC>
 keymap("i", "jk", "<ESC>", opts)
-
 
 -- Visual --
 -- Stay in indent mode
@@ -101,8 +100,18 @@ keymap("i", "<leader>sn", "<ESC>F r_ea", opts)
 -- keymap("n", "<leader>dn", ":s/\>-\</_/ge<CR> :noh <CR>", opts)
 -- keymap("i", "<leader>dn", "<ESC>:s/\>-\</_/ge<CR>:noh<CR>A", opts)
 
+-- Upper case
+keymap("i", "<leader><C-u>", "<ESC>viwUEa", opts)
+
 -- Telescope
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = with_preview }))<cr>", opts)
 keymap("n", "<leader>z", "<cmd>lua require'telescope'.extensions.zoxide.list((require('telescope.themes').get_dropdown({ previewer = with_preview })))<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+
+-- Folding keymaps
+-- Space to toggle folds
+keymap("n", "<SPACE>", "zA", opts)
+keymap("v", "<SPACE>", "zA", opts)
+keymap("n", "<S-SPACE>", "za", term_opts)
+keymap("v", "<S-SPACE>", "za", term_opts)

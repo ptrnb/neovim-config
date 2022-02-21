@@ -23,3 +23,8 @@ configs.setup {
     enable_autocmd = false,
   },
 }
+
+vim.wo.foldmethod = "expr"
+vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
+-- Don't fold files on open
+vim.wo.foldlevel = 99

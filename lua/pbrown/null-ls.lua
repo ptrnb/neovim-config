@@ -5,9 +5,9 @@ end
 
 null_ls.setup {
   sources = {
-    require("null-ls").builtins.formatting.stylua,
-    require("null-ls").builtins.formatting.prettier,
-    require("null-ls").builtins.formatting.rustfmt,
+    null_ls.builtins.formatting.stylua,
+    null_ls.builtins.formatting.prettier,
+    null_ls.builtins.formatting.rustfmt,
   }
 }
 
