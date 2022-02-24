@@ -113,5 +113,5 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 -- Space to toggle folds
 keymap("n", "<SPACE>", "zA", opts)
 keymap("v", "<SPACE>", "zA", opts)
-keymap("n", "<S-SPACE>", "za", term_opts)
-keymap("v", "<S-SPACE>", "za", term_opts)
+keymap("n", "<M-SPACE>", "za", opts)
+keymap("v", "<M-SPACE>", "za", opts)
