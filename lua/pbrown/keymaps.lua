@@ -105,9 +105,9 @@ keymap("i", "<leader><C-u>", "<ESC>viwUEa", opts)
 
 -- Telescope
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = with_preview }))<cr>", opts)
-keymap("n", "<leader>z", "<cmd>lua require'telescope'.extensions.zoxide.list((require('telescope.themes').get_dropdown({ previewer = with_preview })))<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>tf", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = with_preview }))<cr>", opts)
+keymap("n", "<leader>tz", "<cmd>lua require'telescope'.extensions.zoxide.list((require('telescope.themes').get_dropdown({ previewer = with_preview })))<cr>", opts)
+keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Folding keymaps
 -- Space to toggle folds
