@@ -47,7 +47,7 @@ return packer.startup(function(use)
 	use("justinmk/vim-sneak") -- A better, faster forward search
 	use("nvim-lualine/lualine.nvim") -- Lua status line
 	use("numToStr/Comment.nvim") -- Easily comment stuff
-  use("windwp/nvim-autopairs") -- Automatically pair braces and quotes
+	use("windwp/nvim-autopairs") -- Automatically pair braces and quotes
 	use("kyazdani42/nvim-web-devicons") -- Provides icons for plugins when using a Nerdfont
 	use({
 		"kyazdani42/nvim-tree.lua", -- File explorer in Lua
@@ -90,13 +90,17 @@ return packer.startup(function(use)
 	-- Snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
-  use("honza/vim-snippets") -- Snipmate stlye snippets
+	use("honza/vim-snippets") -- Snipmate stlye snippets
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- manage installation of language servers
 	use("simrat39/rust-tools.nvim") -- rust-analyzer enhancements
 	use("jose-elias-alvarez/null-ls.nvim") -- formatter and linter that links into LSP
+	use("godlygeek/tabular") -- Tabularize plugin
+
+	-- Terraform
+	use("hashivim/vim-terraform") -- terraform plugin that supports fmt on save
 
 	-- Rust
 	-- use {
