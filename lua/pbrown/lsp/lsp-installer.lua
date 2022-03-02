@@ -14,7 +14,7 @@ lsp_installer.on_server_ready(function(server)
   -- Initialise the LSP with rust-tools instead
   if server.name == "rust_analyzer" then
     local rust_tool_opts = {
-      autoSetHints = false,
+      autoSetHints = true,
       hover_with_actions = true,
       runnables = {
         use_telescope = true,
