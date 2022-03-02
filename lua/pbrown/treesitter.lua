@@ -10,7 +10,7 @@ configs.setup({
 	},
 	indent = {
 		enable = true,
-		disable = { "yaml" },
+		disable = { "yaml", "terraform", "hcl" },
 	},
 	rainbow = {
 		enable = true,
