@@ -8,7 +8,7 @@ if not snip_status_ok then
 	return
 end
 
-require("luasnip.loaders.from_vscode").lazy_load()
+-- require("luasnip.loaders.from_vscode").lazy_load()
 
 local check_backspace = function()
 	local col = vim.fn.col(".") - 1
@@ -16,31 +16,56 @@ local check_backspace = function()
 end
 
 local kind_icons = {
-	Text = "ť",
+	-- Text = "ť",
+	-- Method = "m",
+	-- Function = "∫",
+	-- Constructor = "",
+	-- Field = "",
+	-- Variable = "",
+	-- Class = "",
+	-- Interface = "",
+	-- Module = "",
+	-- Property = "",
+	-- Unit = "",
+	-- Value = "",
+	-- Enum = "",
+	-- Keyword = "",
+	-- Snippet = "",
+	-- Color = "",
+	-- File = "",
+	-- Reference = "",
+	-- Folder = "",
+	-- EnumMember = "",
+	-- Constant = "",
+	-- Struct = "",
+	-- Event = "",
+	-- Operator = "",
+	-- TypeParameter = "",
+	Text = "",
 	Method = "m",
-	Function = "∫",
-	Constructor = "",
-	Field = "",
-	Variable = "",
-	Class = "",
-	Interface = "",
-	Module = "",
+	Function = "",
+	Constructor = "",
+	Field = "",
+	Variable = "",
+	Class = "",
+	Interface = "",
+	Module = "",
 	Property = "",
-	Unit = "",
-	Value = "",
+	Unit = "",
+	Value = "",
 	Enum = "",
 	Keyword = "",
 	Snippet = "",
-	Color = "",
-	File = "",
-	Reference = "",
-	Folder = "",
+	Color = "",
+	File = "",
+	Reference = "",
+	Folder = "",
 	EnumMember = "",
-	Constant = "",
+	Constant = "",
 	Struct = "",
 	Event = "",
-	Operator = "",
-	TypeParameter = "",
+	Operator = "",
+	TypeParameter = "",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
@@ -126,16 +151,16 @@ cmp.setup({
 			"i",
 			"s",
 		}),
-    ["<S-Tab>"] = cmp.mapping(function (fallback)
-      if luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, {
-        "i",
-        "s",
-      }),
+		["<S-Tab>"] = cmp.mapping(function(fallback)
+			if luasnip.jumpable(-1) then
+				luasnip.jump(-1)
+			else
+				fallback()
+			end
+		end, {
+			"i",
+			"s",
+		}),
 	}, -- End of mapping
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
@@ -154,10 +179,10 @@ cmp.setup({
 		end,
 	},
 	sources = {
+		{ name = "luasnip" },
 		{ name = "nvim_lua", keyword_length = 3 },
 		{ name = "nvim_lsp", keyword_length = 3 },
-		{ name = "luasnip" },
-		{ name = "buffer", keyword_length = 5 },
+		{ name = "buffer", keyword_length = 2 },
 		{ name = "path" },
 	},
 	sorting = {
@@ -182,6 +207,14 @@ cmp.setup({
 		ghost_text = false,
 		native_menu = false,
 	},
+})
+
+cmp.setup.filetype("gitcommit", {
+	sources = cmp.config.sources({
+		{ name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
+	}, {
+		{ name = "buffer" },
+	}),
 })
 
 cmp.setup.filetype({ "markdown", "help" }, {
