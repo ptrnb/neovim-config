@@ -6,6 +6,7 @@ end
 -- telescope.load_extension('media_files')
 
 local actions = require "telescope.actions"
+local themes = require "telescope.themes"
 
 telescope.setup {
   defaults = {
@@ -95,6 +96,9 @@ telescope.setup {
       override_generic_sorter = true,
       override_file_sorter = true,
       case_mode = "smart_case",
+    },
+    ["ui-select"] = {
+      themes.get_dropdown {}
     }
     -- media_files = {                 -- only supported on linux
         -- filetypes whitelist
@@ -110,5 +114,6 @@ telescope.setup {
   },
 }
 
-telescope.load_extension('fzf')
-telescope.load_extension('zoxide')
+telescope.load_extension("fzf")
+telescope.load_extension("zoxide")
+telescope.load_extension("ui-select")

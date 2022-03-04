@@ -53,6 +53,7 @@ vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-,_]])
 vim.cmd([[set formatoptions+=t,c,r,q,n,b]]) -- describes automatic formatting - see fo-table
 vim.cmd([[set listchars=nbsp:¬,eol:¶,extends:»,precedes:«,trail:•]])
+vim.cmd([[set fillchars+=eob:\ "]])
 
 -- Disable matchit --
 vim.g.loaded_matchit = 1
