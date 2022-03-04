@@ -13,9 +13,13 @@ lsp_installer.on_server_ready(function(server)
 
 	-- Initialise the LSP with rust-tools instead
 	if server.name == "rust_analyzer" then
+		local extension_path = vim.env.HOME .. "/.vscode/extensions/vadimcn.vscode-lldb-1.6.10/"
+		local codelldb_path = extension_path .. "adapter/codelldb"
+		local liblldb_path = extension_path .. "lldb/lib/liblldb.dylib"
 		local rust_tool_opts = {
 			autoSetHints = true,
 			hover_with_actions = true,
+			executor = require("rust-tools/executors").termopen,
 			runnables = {
 				use_telescope = true,
 			},
@@ -25,10 +29,30 @@ lsp_installer.on_server_ready(function(server)
 			inlay_hints = {
 				only_current_line = true,
 			},
+			hover_actions = {
+				-- the border that is used for the hover window
+				-- see vim.api.nvim_open_win()
+				border = {
+					{ "╭", "FloatBorder" },
+					{ "─", "FloatBorder" },
+					{ "╮", "FloatBorder" },
+					{ "│", "FloatBorder" },
+					{ "╯", "FloatBorder" },
+					{ "─", "FloatBorder" },
+					{ "╰", "FloatBorder" },
+					{ "│", "FloatBorder" },
+				},
+
+				-- whether the hover action window gets automatically focused
+				auto_focus = false,
+			},
 		}
 		require("rust-tools").setup({
 			tools = rust_tool_opts,
 			server = vim.tbl_deep_extend("force", server:get_default_options(), opts),
+			dap = {
+				adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
+			},
 		})
 		server:attach_buffers()
 		return
