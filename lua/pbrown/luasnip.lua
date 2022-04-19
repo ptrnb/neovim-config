@@ -59,6 +59,16 @@ ls.snippets = {
 			t({ "#![allow(unused)] // Silence unused warnings during development (to comment out)", "" }),
 		}),
 	},
+  json = {
+    s(
+      "nnnn",
+      t({
+        "actioned_by = {",
+        "\tworkload = \"N\",",
+        "\tcsp = \"N\",",
+        "}"})
+      )
+  }
 }
 
 -- Snipmate style

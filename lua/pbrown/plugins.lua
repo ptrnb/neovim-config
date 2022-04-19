@@ -102,6 +102,9 @@ return packer.startup(function(use)
 	-- Terraform
 	use("hashivim/vim-terraform") -- terraform plugin that supports fmt on save
 
+  -- OPA rego
+  use("tsandall/vim-rego") -- OPA rego syntax plugin
+
 	-- Rust
 	-- use {
 	--   'rust-lang/rust.vim',                  -- Rust syntax support
