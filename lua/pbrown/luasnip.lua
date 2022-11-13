@@ -43,7 +43,7 @@ end
 -- Load snippets
 
 -- LUA style
-ls.snippets = {
+ls.add_snippets(nil, {
 	all = {
 		s("ternary", {
 			-- equivalent to "${1:cond} ? ${2:then} : ${3:else}"
@@ -69,7 +69,7 @@ ls.snippets = {
         "}"})
       )
   }
-}
+})
 
 -- Snipmate style
 require("luasnip.loaders.from_snipmate").lazy_load()

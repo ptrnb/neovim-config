@@ -18,7 +18,7 @@ lsp_installer.on_server_ready(function(server)
 		local liblldb_path = extension_path .. "lldb/lib/liblldb.dylib"
 		local rust_tool_opts = {
 			autoSetHints = true,
-			hover_with_actions = true,
+			-- hover_with_actions = true,
 			executor = require("rust-tools/executors").termopen,
 			runnables = {
 				use_telescope = true,
