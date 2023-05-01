@@ -5,6 +5,7 @@ local options = {
 	clipboard = "unnamedplus", -- allows neovim to access the system clipboard
 	cmdheight = 2, -- more space in the neovim command line for displaying messages
 	completeopt = { -- Options for nvim-cmp
+    "menu",
 		"menuone", -- popup even when there's only one match
 		"noinsert", -- do not insert text until a selection is made
 		"noselect", -- force user to select from the popup menu
@@ -67,3 +68,28 @@ vim.g.rustfmt_autosave = 1
 -- Terraform options
 vim.g.terraform_fmt_on_save = 1
 vim.g.terraform_align = 1
+
+-- Neovide options
+if vim.g.neovide then
+  vim.o.guifont = "Monoid Nerd Font:h12"
+  vim.opt.linespace = 12
+  vim.g.neovide_padding_top = 25
+  vim.g.neovide_padding_bottom = 25
+  vim.g.neovide_padding_right = 25
+  vim.g.neovide_padding_left = 25
+  -- Helper function for transparency formatting
+  local alpha = function()
+    return string.format("%x", math.floor((255 * vim.g.transparency) or 0.95))
+  end
+  -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
+  vim.g.neovide_transparency = 1
+  vim.g.transparency = 0.95
+  -- vim.g.neovide_background_color = "#0f1117" .. alpha()
+  vim.g.neovide_scroll_animation_length = 0.3
+  vim.g.neovide_hide_mouse_when_typing = true
+  vim.g.neovide_confirm_quit = true
+  vim.g.neovide_remember_window_size = true
+  vim.g.neovide_cursor_animation_length = 0.05
+  vim.g.neovide_cursor_animate_command_line = false
+  vim.g.neovide_cursor_vfx_mode = "pixiedust"
+end
