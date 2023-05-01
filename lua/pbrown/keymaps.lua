@@ -58,7 +58,7 @@ keymap("n", "<leader>nr", "<CMD>NvimTreeRefresh<CR>", opts)
 keymap("n", "<leader>rh", "<CMD>RustToggleInlayHints<CR>", opts)
 
 -- Telescope
--- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>tf", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = with_preview }))<cr>", opts)
 keymap("n", "<leader>tz", "<cmd>lua require'telescope'.extensions.zoxide.list((require('telescope.themes').get_dropdown({ previewer = with_preview })))<cr>", opts)
 keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", opts)

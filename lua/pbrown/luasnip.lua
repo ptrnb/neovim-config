@@ -58,6 +58,16 @@ ls.add_snippets(nil, {
 		s("allu", {
 			t({ "#![allow(unused)] // Silence unused warnings during development (to comment out)", "" }),
 		}),
+    s("openfile", {
+      t({"fn open(filename: &str) -> MyResult<Box<dyn BufRead>> {",
+          "  match filename {",
+          "    \"-\" => Ok(Box::new(BufReader::new(io::stdin()))),",
+          "    _ => Ok(Box::new(BufReader::new(",
+          "      File::open(filename).map_err(|e| format!(\"{}: {}\", filename, e))?,",
+          "    ))),",
+          "  }",
+          "}"}),
+    }),
 	},
   json = {
     s(
