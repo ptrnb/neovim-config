@@ -26,7 +26,7 @@ configs.setup({
 	},
 })
 
-vim.wo.foldmethod = "expr"
-vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
 -- Don't fold files on open
-vim.wo.foldlevel = 99
+vim.o.foldlevel = 99

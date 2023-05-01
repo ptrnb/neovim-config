@@ -119,7 +119,7 @@ vim.cmd('autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()')
 
 -- Folding keymaps
 -- Space to toggle folds
-keymap("n", "<SPACE>", "zA", opts)
-keymap("v", "<SPACE>", "zA", opts)
-keymap("n", "<M-SPACE>", "za", opts)
-keymap("v", "<M-SPACE>", "za", opts)
+keymap("n", "<SPACE>", "za", opts)
+keymap("v", "<SPACE>", "za", opts)
+keymap("n", "<M-SPACE>", "zA", opts)
+keymap("v", "<M-SPACE>", "zA", opts)
