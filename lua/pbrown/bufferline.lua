@@ -2,7 +2,6 @@ local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
 	return
 end
-
 bufferline.setup({
 	options = {
 		numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
@@ -16,7 +15,7 @@ bufferline.setup({
 		-- and so changing this is NOT recommended, this is intended
 		-- as an escape hatch for people who cannot bear it for whatever reason
 		indicator = {
-      icon = "▎" 
+      icon = "▎"
     },
 		buffer_close_icon = "",
 		-- buffer_close_icon = '',
@@ -75,6 +74,7 @@ bufferline.setup({
 		--   return buffer_a.modified > buffer_b.modified
 		-- end
 	},
+  --[[
 	highlights = {
 		fill = {
 			fg = { attribute = "fg", highlight = "#ff0000" },
@@ -174,4 +174,6 @@ bufferline.setup({
 			bg = { attribute = "bg", highlight = "Normal" },
 		},
 	},
-})
+  --]]
+}
+)

@@ -23,15 +23,15 @@ local plugins = {
 	"nvim-lualine/lualine.nvim",   -- Lua status line
 	"numToStr/Comment.nvim",   -- Easily comment stuff
 	"windwp/nvim-autopairs",   -- Automatically pair braces and quotes
-	"kyazdani42/nvim-web-devicons",   -- Provides icons for plugins when using a Nerdfont
+	"nvim-tree/nvim-web-devicons",   -- Provides icons for plugins when using a Nerdfont
 	{
-		"kyazdani42/nvim-tree.lua", -- File explorer in Lua
-		dependencies = "kyazdani42/nvim-web-devicons",
+		"nvim-tree/nvim-tree.lua", -- File explorer in Lua
+		dependencies = "nvim-tree/nvim-web-devicons",
 	},
 	{
 		"akinsho/bufferline.nvim", -- Buffer statusline
     version = "*",
-		dependencies = "kyazdani42/nvim-web-devicons",
+		dependencies = "nvim-tree/nvim-web-devicons",
 	},
 
 	-- LSP
